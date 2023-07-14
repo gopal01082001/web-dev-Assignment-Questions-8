@@ -1,0 +1,44 @@
+<!-- **Q.8** Create a Counter Web App using React
+- Develop a web application using React that functions as a counter.
+- Include two buttons in the UI:
+    1. "Increment" button:
+        - On clicking this button, the counter value should be incremented by one.
+    2. "Decrement" button:
+        - On clicking this button, the counter value should be decremented by one.
+- Implement the counter logic using React's state management.
+- Ensure that the counter value is displayed in the UI and updates in real-time when incremented or decremented.
+- Use appropriate React components and hooks to manage the counter state and handle button click events.
+Sure! Here's an example of a Counter web app implemented using React:
+import React, { useState } from 'react';
+
+function CounterApp() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+  return (
+    <div>
+      <h2>Counter App</h2>
+      <div>
+        <button onClick={increment}>Increment</button>
+        <span>{count}</span>
+        <button onClick={decrement}>Decrement</button>
+      </div>
+    </div>
+  );
+}
+export default CounterApp;
+In this example, we use the useState hook to manage the count state variable, which represents the current value of the counter. The increment and decrement functions update the count state by calling the setCount function with the new value. The counter value is displayed in the UI using the <span> element, and the buttons trigger the corresponding increment and decrement functions when clicked.
+To use this CounterApp component, you need to include it in your main application component or entry point:
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CounterApp from './CounterApp';
+ReactDOM.render(<CounterApp />, document.getElementById('root'));
+Make sure to replace 'root' with the ID of the HTML element where you want to render the CounterApp component.
+With this setup, when you run your React application, you should see the Counter web app with the counter value displayed, and you can increment or decrement it by clicking the respective buttons.
+ -->

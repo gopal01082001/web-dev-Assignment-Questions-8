@@ -1,0 +1,22 @@
+<!-- Q.4 Whats component? Types of component in react js
+In React.js, a component is a reusable, self-contained piece of code that defines the structure and behavior of a part of the user interface. Components are the building blocks of a React application, and they can be composed together to create complex UIs.
+React components can be classified into two main types:
+Function Components:
+Function components are defined as JavaScript functions. They receive props (properties) as input and return JSX (JavaScript XML) to describe the structure and appearance of the component. Function components are the simpler and more modern way of defining components in React. Here's an example of a function component:
+function MyComponent(props) {
+  return <div>Hello, {props.name}!</div>;
+}
+Class Components:
+Class components are defined as JavaScript classes that extend the React.Component base class. They have a more verbose syntax and can manage their own state using this.state. Class components also have access to lifecycle methods, which allow you to perform actions at different stages of the component's lifecycle. Here's an example of a class component
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+  render() {
+    return <div>Count: {this.state.count}</div>;
+  }
+}
+In addition to these main types, React also introduces the concept of "Higher-Order Components" (HOCs) and "Render Props," which are advanced techniques to enhance component reusability and composition. However, as of my knowledge cutoff in September 2021, React Hooks have gained popularity and are often used instead of HOCs and Render Props for achieving similar functionality in a more straightforward way.
+It's important to note that since React 16.8, with the introduction of React Hooks, function components have become the recommended approach for writing components in React. Hooks provide a way to use state and other React features in function components without the need for classes, simplifying component code and promoting better reusability and encapsulation.
+ -->

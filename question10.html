@@ -1,0 +1,50 @@
+<!-- <aside>
+    💡 **Q.10**  Develop a simple website using React, fetch and display products from the "https://fakestoreapi.com/products" API. The website should have the following features:
+    - Fetch product data from the "https://fakestoreapi.com/products" API.
+    - Display the products in a user-friendly UI.
+    - Show **Three products** in a single row for optimal visibility and layout.
+    - Use **React** to achieve the desired layout and functionality.
+    - Ensure that the UI is visually appealing and responsive.
+    - Implement error handling to handle any issues with API requests.
+    - Test the website thoroughly to ensure proper functionality and performance.
+    - Provide clear and concise documentation to guide users on how to interact with the website and understand its features.
+    Certainly! Here's an example of a simple website developed using React that fetches and displays products from the "https://fakestoreapi.com/products" API:
+    import React, { useEffect, useState } from 'react';
+    function ProductList() {
+      const [products, setProducts] = useState([]);
+      const [error, setError] = useState(null);
+    
+      useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+          .then(response => response.json())
+          .then(data => setProducts(data))
+          .catch(error => setError(error));
+      }, []);
+
+      if (error) {
+        return <div>Error: {error.message}</div>;
+      }
+
+      return (
+        <div>
+          <h2>Product List</h2>
+          <div className="product-container">
+            {products.map(product => (
+              <div key={product.id} className="product-card">
+                <img src={product.image} alt={product.title} />
+                <h3>{product.title}</h3>
+                <p>{product.price}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+    export default ProductList;
+    In this example, we use the useState and useEffect hooks. The useState hook is used to manage the products state, which stores the fetched product data, and the error state, which stores any error that occurs during the API request. The useEffect hook is used to fetch the product data from the API when the component mounts ([] dependency) and update the products state.
+    In the UI, we display the product data by mapping over the products array and rendering a card for each product. Each card displays the product image, title, and price.
+    To use this ProductList component, include it in your main application component or entry point, similar to the previous example.
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import Product
+     -->

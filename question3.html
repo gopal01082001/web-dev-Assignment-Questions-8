@@ -1,0 +1,16 @@
+<!-- Q.3 Difference between Virtual Dom vs Real Dom
+The main difference between the Virtual DOM and the Real DOM (Document Object Model) lies in their behavior and how they handle updates to the user interface.
+Real DOM:
+The Real DOM is the actual tree-like structure that represents the elements of a web page.
+It is a browser's internal representation of the HTML document, and any updates or changes to the DOM trigger reflows and repaints, affecting the rendering and performance of the web page.
+Manipulating the Real DOM directly can be computationally expensive and slow, especially when dealing with large and complex UI structures.
+Each update to the Real DOM may involve traversing the entire DOM tree, making changes, and updating the browser's rendering, even if only a small part of the DOM has changed.
+Virtual DOM:
+The Virtual DOM is a lightweight copy or abstraction of the Real DOM.
+It is a JavaScript object that represents the structure and state of the UI components in a virtualized form.
+Updates made to the Virtual DOM do not immediately affect the actual browser's rendering.
+Instead, the Virtual DOM allows libraries and frameworks like React to compare and calculate the minimal set of changes needed to update the Real DOM efficiently.
+By batching and optimizing these changes, the Virtual DOM can significantly reduce the number of direct manipulations performed on the Real DOM, resulting in improved performance.
+Once the necessary changes are determined, the Virtual DOM updates the Real DOM only in the specific places where modifications are required, minimizing the impact on the overall rendering process.
+In summary, the Real DOM is the actual browser representation of the web page, and any updates to it trigger expensive rendering operations. The Virtual DOM, on the other hand, is a lightweight representation that allows for efficient updates and minimizes direct interactions with the Real DOM, leading to improved performance and better user experience.
+ -->
